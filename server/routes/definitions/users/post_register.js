@@ -9,7 +9,8 @@ module.exports = {
   validate: {
     payload: {
       username: Joi.string().min(3).max(12).required(),
-      password: Joi.string().min(3).required()
+      password: Joi.string().min(3).required(),
+      avatar: Joi.string().min(3).required()
     }
   },
   auth: {

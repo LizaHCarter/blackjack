@@ -8,6 +8,7 @@ var mongoose = require('mongoose'),
 UserSchema = new mongoose.Schema({
   username:  {type: String, required: true, validate: [usernameV, 'username length'], unique: true},
   password:  {type: String, required: true, validate: [passwordV, 'password length']},
+  avatar:    {type: String, required: true, default: '/assets/default-profile.jpg'},
   createdAt: {type: Date,  required: true, default: Date.now}
 });
 
