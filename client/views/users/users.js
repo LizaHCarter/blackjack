@@ -19,6 +19,7 @@
         }else{
           User.login($scope.user).then(function(response){
             $rootScope.$broadcast('username', $scope.user.username);
+            $rootScope.$broadcast('avatar', $scope.user.avatar);
             toastr.success('User successfully authenticated.');
             $state.go('home');
           }, function(){

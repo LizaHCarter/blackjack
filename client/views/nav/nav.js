@@ -13,6 +13,10 @@
         $scope.$digest();
       });
 
+      $scope.$on('avatar', function(e, avatar){
+          $scope.avatar = avatar;
+        });
+
       $scope.logout = function(){
         User.logout().then(function(){
           $scope.username = null;
